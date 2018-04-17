@@ -1,10 +1,12 @@
 import loginPage from './templates/login.html';
 import cartPage from './templates/cart.html';
 import checkOutPage from './templates/checkOut.html';
+import editPage from './templates/edit.html';
 
 import loginCtrl from './controllers/login';
 import cartCtrl from './controllers/cart';
 import checkOutCtrl from './controllers/checkOut';
+import editCtrl from './controllers/edit';
 
 function config($stateProvider,$urlRouterProvider){
     $stateProvider
@@ -30,11 +32,21 @@ function config($stateProvider,$urlRouterProvider){
     })
     .state({
         name:"checkOut",
-        url:"/checkOut",
+        url:"/checkOut/:index",
         views:{
             "main":{
                 template:checkOutPage,
                 controller:checkOutCtrl
+            }
+        }
+    })
+    .state({
+        name:"edit",
+        url:"/edit/:index",
+        views:{
+            "main":{
+                template:editPage ,
+                controller:editCtrl
             }
         }
     })
