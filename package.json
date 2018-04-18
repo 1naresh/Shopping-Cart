@@ -26,6 +26,7 @@
     "body-parser": "^1.18.2",
     "bootstrap": "^4.0.0",
     "express": "^4.16.3",
+    "jsonwebtoken": "^8.2.1",
     "mongoose": "^5.0.13",
     "ngstorage-webpack": "^2.2.2",
     "request": "^2.85.0",
