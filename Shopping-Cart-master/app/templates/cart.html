@@ -1,0 +1,30 @@
+<div style="margin:50px">
+    <div>
+        item:<input type="text" ng-model="item"/>
+    </div>
+    <div>
+        price:<input type="number" ng-model="price"/>
+    </div>
+    <div>
+        quantity:<input type="number" ng-model="quantity"/>
+    </div>
+    <p ng-if="err">please enter</p>
+    <div>
+        <button ng-click="addItem(item,price,quantity)">addItem</button>
+    </div>
+    <table>
+        <tr>
+            <th>name</th>
+            <th>price</th>
+            <th>quantity</th>
+            <th></th>
+        </tr>
+        <tr ng-repeat="item in  items">
+            <td>{{item.item}}</td>
+            <td>{{item.price}}</td>
+            <td>{{item.quantity}}</td>
+            <td><button ng-click="checkOut($index)">check out</button> </td>
+        </tr>
+    </table>
+    
+</div>
